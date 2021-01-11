@@ -68,4 +68,7 @@ def normalize_string(string):
 	for sign in puct_signs:
 		string = re.sub(' +' + sign, sign[1], string)
 	
+	if string[-1] == ".":
+		string = string[:-1]
+	
 	return string.lower()
